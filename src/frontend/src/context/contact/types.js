@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ADD_CONTACT = 'ADD_CONTACT';
+exports.DELETE_CONTACT = 'DELETE_CONTACT';
+exports.SET_CURRENT = 'SET_CURRENT';
+exports.CLEAR_CURRENT = 'CLEAR_CURRENT';
+exports.UPDATE_CONTACT = 'UPDATE_CONTACT';
+exports.FILTER_CONTACTS = 'FILTER_CONTACTS';
+exports.CLEAR_FILTER = 'CLEAR_FILTER';
+exports.SET_ALERT = 'SET_ALERT';
+exports.REMOVE_ALERT = 'REMOVE_ALERT';
