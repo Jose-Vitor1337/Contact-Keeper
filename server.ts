@@ -12,12 +12,13 @@ createConnection();
 
 // Init Middleware
 app.use(express.json())
+app.use(cors())
 
 // Define our Router from de Contexts Api from this aplication
 app.use('/api/users', require('./router/users'))
 app.use('/api/authentication', require('./router/authentication'))
 app.use('/api/contacts', require('./router/contacts'))
-app.use(cors())
+
 
 // Creating a local server
 app.listen(enviroment.port, () => console.log(`The Server start on the port ${enviroment.port}`))
