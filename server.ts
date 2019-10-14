@@ -1,6 +1,5 @@
 import createConnection from './config/database'
 import enviroment from './common/common'
-import cors from 'cors'
 import * as express from 'express'
 
 const app = express();
@@ -12,7 +11,6 @@ createConnection();
 
 // Init Middleware
 app.use(express.json())
-app.use(cors())
 
 // Define our Router from de Contexts Api from this aplication
 app.use('/api/users', require('./router/users'))
