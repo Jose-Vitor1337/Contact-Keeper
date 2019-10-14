@@ -1,5 +1,6 @@
 import createConnection from './config/database'
 import enviroment from './common/common'
+import cors from 'cors'
 import * as express from 'express'
 
 const app = express();
@@ -16,6 +17,7 @@ app.use(express.json())
 app.use('/api/users', require('./router/users'))
 app.use('/api/authentication', require('./router/authentication'))
 app.use('/api/contacts', require('./router/contacts'))
+app.use(cors())
 
 // Creating a local server
 app.listen(enviroment.port, () => console.log(`The Server start on the port ${enviroment.port}`))
