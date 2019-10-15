@@ -6,7 +6,7 @@ const cors_1 = require("cors");
 const express = require("express");
 const app = express();
 app.get('/', (req, res) => res.json({ msg: "Welcome to the Contact Keeper API, in the BackEnd" }));
-app.use(cors_1.default());
+app.use(cors_1());
 // Connect Database MongoDB
 database_1.default();
 // Init Middleware
