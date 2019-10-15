@@ -6,6 +6,7 @@ import * as express from 'express'
 const app = express();
 
 app.get('/', (req, res) => res.json({ msg: "Welcome to the Contact Keeper API, in the BackEnd" }))
+app.use(cors())
 
 // Connect Database MongoDB
 createConnection();
@@ -17,7 +18,7 @@ app.use(express.json())
 app.use('/api/users', require('./router/users'))
 app.use('/api/authentication', require('./router/authentication'))
 app.use('/api/contacts', require('./router/contacts'))
-app.use(cors())
+
 
 
 // Creating a local server

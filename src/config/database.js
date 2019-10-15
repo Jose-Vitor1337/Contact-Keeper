@@ -1,19 +1,19 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var mongoose = require("mongoose");
-var common_1 = require("./../common/common");
+const mongoose = require("mongoose");
+const common_1 = require("./../common/common");
 // const database = config.get('mongoURI') 
 // import * as config from 'config'
-var createConnection = function () {
+const createConnection = () => {
     console.log("Connecting...");
     mongoose.connect(common_1.default.url, {
         useCreateIndex: true,
         useFindAndModify: false,
         useNewUrlParser: true,
         useUnifiedTopology: true
-    }).then(function () {
+    }).then(() => {
         console.log("MongoDB Connected: " + common_1.default.url);
-    }).catch(function (error) {
+    }).catch((error) => {
         console.error("Failed Connection: " + error);
     });
 };
